@@ -21,20 +21,47 @@ import Cocoa
 import PlaygroundSupport
 
 // Create a new canvas
-let canvas = Canvas(width: 300, height: 500)
+let canvas = Canvas(width: 450, height: 350)
 
-// Draw a circle at the origin with radius of 50 pixels
-canvas.drawEllipse(centreX: 0, centreY: 0, width: 50, height: 50)
+// Background Color
+canvas.fillColor = Color.init(hue: 200, saturation: 50, brightness: 100, alpha: 100)
+canvas.drawRectangle(centreX: 225, centreY: 175, width: 450, height: 350)
 
 // Show where the origin is
 canvas.drawAxes()
 
-// Draw an ellipse in a different color at the centre of the canvas
-canvas.fillColor = Color.green
-canvas.drawEllipse(centreX: 150, centreY: 250, width: 50, height: 100)
+// Draw Sun Rays
 
-// Add a rectangle to the top of the screen
-canvas.drawRectangle(centreX: 150, centreY: 400, width: 100, height: 50)
+
+// Draw Clouds
+
+
+// Draw Sun
+// Draw the Rainbow
+canvas.borderColor = Color.red
+canvas.defaultBorderWidth = 50
+canvas.fillColor = Color.blue
+canvas.drawEllipse(centreX: 225, centreY: 0, width: 375, height: 350)
+canvas.borderColor =  Color.orange
+canvas.defaultBorderWidth = 50
+canvas.fillColor = Color.blue
+canvas.drawEllipse(centreX: 225, centreY: 0, width: 325, height: 300)
+canvas.borderColor = Color.yellow
+canvas.defaultBorderWidth = 50
+canvas.fillColor = Color.blue
+canvas.drawEllipse(centreX: 225, centreY: 0, width: 275, height: 250)
+canvas.borderColor = Color.green
+canvas.defaultBorderWidth = 50
+canvas.fillColor = Color.blue
+canvas.drawEllipse(centreX: 225, centreY: 0, width: 225, height: 200)
+canvas.borderColor = Color.blue
+canvas.fillColor =  Color.blue
+canvas.drawEllipse(centreX: 225, centreY: 0, width: 175, height: 150)
+canvas.borderColor = Color.purple
+canvas.defaultBorderWidth = 50
+canvas.fillColor = Color.init(hue: 200, saturation: 50, brightness: 100, alpha: 100)
+canvas.drawEllipse(centreX: 225, centreY: 0, width: 125, height: 100)
+
 
 // This code is necessary to see the result in the Assistant Editor at right
 PlaygroundPage.current.liveView = canvas.imageView
